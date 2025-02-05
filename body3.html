@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gỏi củ hủ dừa </title>
+    <link rel="stylesheet" href="css/style_body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <h1>👉Gỏi củ hủ dừa👈</h1>
+
+    <!-- Đoạn nội dung đầu tiên -->
+    <div class="content">
+        <div class="text">
+            <p>
+                Cách làm gỏi củ hủ dừa <br>
+                <li style="color: red;">Nguyên liệu:</li> <br>
+                Củ hủ dừa: 1 quả<br>
+                Tôm tươi: 200g<br>
+                Thịt ba chỉ: 100g<br>
+                Cà rốt: 1 củ<br>
+                Ớt sừng: 2 quả<br>
+                Rau răm, ngò gai<br>
+                Đậu phộng rang<br>
+                Hành phi<br>
+                Nước mắm, đường, chanh, tỏi, ớt băm<br>
+                Rau sống ăn kèm (xà lách, rau thơm...)<br> <br>
+                <li style="color: red;">Cách làm:</li> <br>
+                Sơ chế:<br>
+                Củ hủ dừa bào sợi, ngâm nước muối loãng cho giòn.<br>
+                Tôm luộc chín, bóc vỏ.<br>
+                Thịt ba chỉ luộc chín, thái mỏng.<br>
+                Cà rốt bào sợi, ngâm nước muối loãng.<br>
+                Ớt sừng thái sợi.<br>
+                Rau răm, ngò gai thái nhỏ.<br> <br>
+                <li style="color: red;">Pha nước trộn:</li> <br>
+                Cho vào chén: 3 muỗng canh nước mắm, 2 muỗng canh đường, 1 muỗng canh nước cốt chanh, 1 muỗng cà phê tỏi băm, 1/2 muỗng cà phê ớt băm.<br>
+                Khuấy đều cho đường tan hết.<br>
+            </p>
+        </div>
+        <div class="image">
+            <img src="img/body3.jpg" alt="Bánh xèo">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="image">
+            <img src="img/goi.jpg" >
+        </div>
+        <div class="text">
+            <p>
+                <li style="color: red;">Trộn gỏi:</li><br>
+                Cho tất cả nguyên liệu đã sơ chế vào tô lớn.<br>
+                Rưới nước trộn vào, dùng đũa trộn đều.<br>
+                Nêm nếm lại cho vừa miệng.<br> <br>
+                <li style="color: red;">Trình bày:</li><br>
+                Cho gỏi ra đĩa, rắc thêm đậu phộng rang và hành phi lên trên.<br>
+                Ăn kèm với rau sống và bánh phồng tôm.<br> <br>
+                <li style="color: red;">Mẹo nhỏ:</li><br>
+                Để gỏi thêm phần hấp dẫn, bạn có thể cho thêm đu đủ xanh bào sợi hoặc tai heo luộc thái mỏng.<br>
+                Nếu không thích ăn cay, bạn có thể giảm lượng ớt hoặc bỏ ớt.<br>
+                Nên chọn củ hủ dừa non để gỏi được giòn ngọt.<br> <br>
+                <li style="color: red;">Lưu ý:</li><br>
+                Món gỏi này nên ăn ngay sau khi làm để đảm bảo độ tươi ngon.<br>
+            </p>
+        </div>
+    </div>
+
+        <!-- Video được chèn vào -->
+    <div class="video-container" style="text-align: center; margin: 30px 0;">
+            <iframe 
+                width="850" 
+                height="500" 
+                src="https://www.youtube.com/embed/sHBRR2J6z5s" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+    </div>
+    <a href="index.html">Quay lại trang chính</a>
+
+<!-- Phần bình luận -->
+<div class="comment-section">
+    <h2>Bình luận</h2>
+
+    <!-- Ô nhập tên -->
+    <div class="comment-box">
+        <input type="text" id="nameInput" placeholder="Nhập tên" />
+    </div>
+    
+    <!-- Ô nhập nội dung bình luận -->
+    <div class="comment-box">
+        <input type="text" id="commentBox" placeholder="Nhập bình luận" />
+    </div>
+    
+    <!-- Nút đăng bình luận -->
+    <div class="comment-actions">
+        <button class="submit-button" onclick="saveComment()">Đăng</button>
+    </div> <br>
+
+    <!-- Khu vực hiển thị danh sách bình luận -->
+    <div id="commentsList">
+        <!-- Bình luận sẽ hiển thị ở đây -->
+    </div>
+</div>
+
+<script>
+    // Mảng bình luận với tên và nội dung
+    const comments = [
+        { name: "An", text: "Bài viết rất hay, cảm ơn bạn!" },
+        { name: "Phương", text: "Tôi rất thích nội dung này, tiếp tục phát huy nhé." },
+        { name: "Nhi", text: "Có ai có câu hỏi về chủ đề này không? Thảo luận cùng mình!" }
+    ];
+
+    // Hàm hiển thị danh sách bình luận
+    function displayComments() {
+        const commentsList = document.getElementById("commentsList");
+        commentsList.innerHTML = ""; // Xóa nội dung hiện tại
+
+        comments.forEach((comment, index) => {
+            // Tạo phần tử HTML cho từng bình luận
+            const commentDiv = document.createElement("div");
+            commentDiv.className = "comment";
+            commentDiv.innerHTML = `
+                <p><strong>${comment.name}:</strong> ${comment.text}</p>
+            `;
+            commentsList.appendChild(commentDiv);
+        });
+    }
+
+    // Hàm thêm bình luận mới
+    function saveComment() {
+        const nameInput = document.getElementById("nameInput");
+        const commentBox = document.getElementById("commentBox");
+        const name = nameInput.value.trim(); // Lấy tên người dùng
+        const commentText = commentBox.value.trim(); // Lấy nội dung bình luận
+
+        if (name && commentText) {
+            // Thêm bình luận vào mảng
+            comments.push({ name, text: commentText });
+
+            // Hiển thị lại danh sách bình luận
+            displayComments();
+
+            // Xóa nội dung trong ô nhập liệu
+            nameInput.value = "";
+            commentBox.value = "";
+        } else {
+            alert("Vui lòng nhập tên và nội dung bình luận!");
+        }
+    }
+
+    // Hiển thị các bình luận có sẵn khi trang tải
+    window.onload = function () {
+        displayComments();
+    };
+</script>
+
+
+
+
+
+    <footer>
+        <h4>Nhóm 3 12A1 </h4>
+        <br>
+        <hr>
+        <div style="text-align: left;">
+            <h2 style="font-size: 1.8rem; color: bisque;">Liên Hệ</h2>
+            <i class="fa-solid fa-envelope"></i><p>Email: v.vkt203@gmail.com</p>
+            <i class="fa-solid fa-phone"></i><p>Điện thoại: 0373599230</p>
+        </div>
+        <hr>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rau câu dừa</title>
+    <link rel="stylesheet" href="css/style_body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <h1>👉Rau câu dừa👈</h1>
+
+    <!-- Đoạn nội dung đầu tiên -->
+    <div class="content">
+        <div class="text">
+            <p>
+                cách làm rau câu dừa  
+Rau câu dừa là món tráng miệng quen thuộc và được nhiều người yêu thích bởi hương vị thơm béo của nước dừa và độ dai giòn của rau câu. Để làm món rau câu dừa tại nhà, bạn có thể tham khảo các cách làm dưới đây:
+Nguyên liệu chung:
+Bột rau câu: Chọn loại bột rau câu dẻo hoặc giòn tùy theo sở thích.
+Nước dừa tươi: Nên chọn loại nước dừa tươi nguyên chất để rau câu có vị thơm ngon tự nhiên.
+Đường: Tùy chỉnh lượng đường theo khẩu vị.
+Muối: Một chút muối sẽ giúp tăng thêm hương vị cho món rau câu.
+Lá dứa: Tùy chọn, giúp rau câu có mùi thơm đặc trưng.
+Khuôn: Có thể sử dụng khuôn hình chữ nhật, khuôn tròn hoặc khuôn hoa tùy thích.
+Cách làm cơ bản:
+Pha bột rau câu: Trộn đều bột rau câu với một lượng nước dừa vừa đủ, để bột tan đều.
+Đun sôi: Cho hỗn hợp bột rau câu và nước dừa lên bếp, đun sôi vừa lửa, vừa khuấy đều.
+Thả lá dứa: Nếu sử dụng lá dứa, bạn có thể buộc lá dứa lại rồi thả vào nồi rau câu đang đun.
+Đổ vào khuôn: Sau khi rau câu sôi, tắt bếp, để nguội một chút rồi đổ vào khuôn.
+Làm lạnh: Cho khuôn rau câu vào tủ lạnh để đông cứng.
+            </p>
+        </div>
+        <div class="image">
+            <img src="img/body2.jpg">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="image">
+            <img src="img/rau.jpg" >
+        </div>
+        <div class="text">
+            <p>
+                Một số biến tấu:
+Rau câu dừa nhiều lớp: Bạn có thể làm rau câu nhiều lớp bằng cách pha các hỗn hợp rau câu với màu sắc và hương vị khác nhau.
+Rau câu dừa trái cây: Thêm các loại trái cây tươi như xoài, nhãn, vải vào rau câu để tăng thêm hương vị và màu sắc.
+Rau câu dừa sữa tươi: Kết hợp nước dừa với sữa tươi để tạo ra món rau câu béo ngậy hơn.
+Lưu ý:
+Tỷ lệ nguyên liệu: Tỷ lệ giữa bột rau câu và nước dừa có thể thay đổi tùy theo loại bột rau câu bạn sử dụng. Bạn có thể tham khảo hướng dẫn trên bao bì sản phẩm.
+Thời gian đun: Không nên đun rau câu quá lâu sẽ làm rau câu bị cứng và mất đi độ trong.
+Khuấy đều: Trong quá trình đun, bạn cần khuấy đều để tránh bột rau câu bị vón cục.
+            </p>
+        </div>
+    </div>
+
+        <!-- Video được chèn vào -->
+    <div class="video-container" style="text-align: center; margin: 30px 0;">
+            <iframe 
+                width="850" 
+                height="500" 
+                src="https://www.youtube.com/embed/LB8KWtKq30s" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+    </div>
+    <a href="index.html">Quay lại trang chính</a>
+
+<!-- Phần bình luận -->
+<div class="comment-section">
+    <h2>Bình luận</h2>
+
+    <!-- Ô nhập tên -->
+    <div class="comment-box">
+        <input type="text" id="nameInput" placeholder="Nhập tên" />
+    </div>
+    
+    <!-- Ô nhập nội dung bình luận -->
+    <div class="comment-box">
+        <input type="text" id="commentBox" placeholder="Nhập bình luận" />
+    </div>
+    
+    <!-- Nút đăng bình luận -->
+    <div class="comment-actions">
+        <button class="submit-button" onclick="saveComment()">Đăng</button>
+    </div> <br>
+
+    <!-- Khu vực hiển thị danh sách bình luận -->
+    <div id="commentsList">
+        <!-- Bình luận sẽ hiển thị ở đây -->
+    </div>
+</div>
+
+<script>
+    // Mảng bình luận với tên và nội dung
+    const comments = [
+        { name: "An", text: "Bài viết rất hay, cảm ơn bạn!" },
+        { name: "Phương", text: "Tôi rất thích nội dung này, tiếp tục phát huy nhé." },
+        { name: "Nhi", text: "Có ai có câu hỏi về chủ đề này không? Thảo luận cùng mình!" }
+    ];
+
+    // Hàm hiển thị danh sách bình luận
+    function displayComments() {
+        const commentsList = document.getElementById("commentsList");
+        commentsList.innerHTML = ""; // Xóa nội dung hiện tại
+
+        comments.forEach((comment, index) => {
+            // Tạo phần tử HTML cho từng bình luận
+            const commentDiv = document.createElement("div");
+            commentDiv.className = "comment";
+            commentDiv.innerHTML = `
+                <p><strong>${comment.name}:</strong> ${comment.text}</p>
+            `;
+            commentsList.appendChild(commentDiv);
+        });
+    }
+
+    // Hàm thêm bình luận mới
+    function saveComment() {
+        const nameInput = document.getElementById("nameInput");
+        const commentBox = document.getElementById("commentBox");
+        const name = nameInput.value.trim(); // Lấy tên người dùng
+        const commentText = commentBox.value.trim(); // Lấy nội dung bình luận
+
+        if (name && commentText) {
+            // Thêm bình luận vào mảng
+            comments.push({ name, text: commentText });
+
+            // Hiển thị lại danh sách bình luận
+            displayComments();
+
+            // Xóa nội dung trong ô nhập liệu
+            nameInput.value = "";
+            commentBox.value = "";
+        } else {
+            alert("Vui lòng nhập tên và nội dung bình luận!");
+        }
+    }
+
+    // Hiển thị các bình luận có sẵn khi trang tải
+    window.onload = function () {
+        displayComments();
+    };
+</script>
+
+
+
+
+
+    <footer>
+        <h4>Nhóm 3 12A1 </h4>
+        <br>
+        <hr>
+        <div style="text-align: left;">
+            <h2 style="font-size: 1.8rem; color: bisque;">Liên Hệ</h2>
+            <i class="fa-solid fa-envelope"></i><p>Email: v.vkt203@gmail.com</p>
+            <i class="fa-solid fa-phone"></i><p>Điện thoại: 0373599230</p>
+        </div>
+        <hr>
+    </footer>
+</body>
+</html>
